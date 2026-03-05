@@ -1,0 +1,223 @@
+===============Tipos primitivos e saída de dados==============
+
+int = 7, -4, 0, 1038, etc. (numeros inteiros)
+
+float = 4.6, 0.34, 0.65, 0.99, -15.32, 7.0 (numeros flutuantes/reais)
+
+bool = True, False 
+
+str = 'Oi', 'Batata', '7.5', '' (texto)
+
+---------------------------------------------------------------
+
+print(type()) == para debug de tipo
+
+print(n.isnumeric()) == conferir se é numérico, pesquise para mais argumentos
+
+
+====================Operadores Aritiméticos====================
+
++ = Adição
+    5+2 == 7
+
+- = Subtrção
+    5-2 == 3
+
+* = Multiplicação
+    5*2 == 10
+
+/ = Divisão
+    5/2 == 2.5
+
+** = Potência
+    5**2 == 25
+
+// = Divisão inteira
+    5//2 == 2
+
+% = Módulo/resto da divisão
+    5%2 == 1
+
+------------------------Ordem de precedência-------------------
+
+1: ()
+
+2: **
+
+3: *, /, // , %
+
+4: +, -
+
+----------------------Outros operadores------------------------
+
+print(f'Oi {nome:=30} !')
+print(f'Valor R${v:.2f})
+
+
+===========================Modulos=============================
+
+As bibliotecas são importantes para realizar algumas funções
+
+import == importa as coisas
+from x import y == importa algo específico da biblioteca
+
+-------------------Bibliotecas--------------------------------
+
+math:
+    ceil = arredonda pra cima
+    floor = arredonda pra baixo
+    trunc = elimina da virgula pra frente
+    pow = potencia
+    sqrt = raiz quadrada
+    factorial = calcula fatorial
+
+emoji:
+    print(r, emoji.emojize(':1st_place_medal:'))
+
+random:
+    random.randint(1, 20)
+
+============Manipulando texto=============
+
+Cada caractere recebe um número, incluindo espaço, etc.
+
+
+fatiamento = pegar pedaços de uma str
+    frase = Curso em Vídeo Python
+
+    frase[9]
+        V
+        obs: os caracteres sempre começam em 0
+
+    frase[9:13]
+        Víde
+        Obs: é sempre 1 a menos, portanto o 13 não conta
+
+    frase[9:21]
+        Vídeo Python
+
+    frase[21:2:2]
+        VdoPto
+        obs: pula de 2 em 2
+
+    frase[:5]
+        Curso
+
+    frase[15:]
+        Python
+
+    frase[9::3]
+        VePh
+        obs: 9 até o fim pulando de 3 em 3
+
+Análise:
+    frase = Curso em Vídeo Python
+    len(frase)
+        21
+        obs: calcula o número de caracteres
+    
+    frase.count('o')
+        3
+        obs: conta o número de 'o'
+
+    frase.count('o', 0, 13)
+        1
+        obs: conta do 0 ao 12
+    
+    frase.find('deo')
+        11
+        obs: mostra onde achou
+
+    frase.find('Android')
+        -1
+        obs: retornou um valor inexistente
+
+    'Curso' in frase
+        True
+        obs: mostra se tem o curso na frase
+
+
+transformação:
+    frase = Curso em Vídeo Python
+
+    frase.replace('Python', 'Android')
+        Curso em Vídeo Android
+        obs: troca a palavra
+
+    frase.upper()
+        CURSO EM VÍDEO PYTHON
+        obs: deixa tudo maiúscula
+
+    frase.lower()
+        curso em vídeo python
+        obs: deixa tudo maiúsculo
+
+    frase.capitalize()
+        Curso em vídeo python
+        obs: deixa tudo em minúsculo menos a primeira letra
+
+    frase.title()
+        Curso Em Vídeo Python
+        obs: deixa as primeiras letras das frases maiúsculas
+
+    frase =    Aprenda Python  
+
+    frase.strip()
+        Aprenda Python
+        obs: remove os espaços inúteis
+
+    frase.rstrip()
+           Aprenda Python
+        obs: remove apenas os ultimos espaços
+    
+    frase.lstrip
+        Apreda Python
+        obs: remove apenas os espaços da esquerda
+
+divisão:
+    frase = Curso em Vídeo Python
+
+    frase.split()
+        Curso(0 a 4) em(0 e 1) Vídeo(0 a 4) Python(0 a 5)
+        obs: Cada palavra recebe uma nova indexação separada em pedaços dividida em uma lista
+
+junção:
+    frase = Curso em Vídeo Python
+
+    '-'.join(frase)
+        Curso-em-Vídeo-Python
+        obs: junta a string com -
+
+
+===============Cores======================
+
+Código ANSI 
+
+\033[style, text, backm
+
+style:
+    0: none
+    1: bold
+    4: underline
+    7: negative
+
+text:
+    30: branco
+    31: vermelho
+    32: verde
+    33: amarelo
+    34: azul
+    35: magenta
+    36: ciano
+    37: cinza
+
+back:
+    40: branco
+    41: vermelho
+    42: verde
+    43: amarelo
+    44: azul
+    45: magenta
+    46: ciano
+    47: cinza
+    
